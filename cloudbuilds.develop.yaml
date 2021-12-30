@@ -25,7 +25,7 @@ steps:
     id: DEPLOY
 
 substitutions:
-  _FUNCTION_PROJECT : test-func-main
+  _FUNCTION_PROJECT : test-func
   _FUNCTION_NAME    : my-func
   _FUNCTION_REGION  : northamerica-northeast1
   _FUNCTION_RUNTIME : nodejs16
