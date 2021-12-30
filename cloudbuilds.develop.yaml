@@ -2,12 +2,19 @@
 #
 
 steps:
+  - name: node
+    entrypoint: yarn
+    args: [ 'install' ]
+    id: INSTALL
+
   - name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
-    args: ['echo', 'Building...']
+    entrypoint: yarn
+    args: [ 'run', 'build' ]
     id: BUILD
 
   - name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
-    args: ['echo', 'Testing...']
+    entrypoint: yarn
+    args: [ 'test' ]
     id: TEST
 
   - name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'

@@ -4,7 +4,8 @@
   "description": "Boilerplate for Google Cloud Function with description about deploy and run",
   "main": "index.js",
   "scripts": {
-    "test": "test"
+    "test": "test",
+    "build": "echo \"Hello, building is done!\""
   },
   "repository": {
     "type": "git",
