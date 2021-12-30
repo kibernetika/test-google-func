@@ -1,0 +1,25 @@
+{
+  "name": "cloud-function-boilerplate",
+  "version": "1.0.0",
+  "description": "Boilerplate for Google Cloud Function with description about deploy and run",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/truepill/cloud-function-boilerplate.git"
+  },
+  "keywords": [
+    "cloud function"
+  ],
+  "author": "Paul Deny",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/truepill/cloud-function-boilerplate/issues"
+  },
+  "homepage": "https://github.com/truepill/cloud-function-boilerplate#readme",
+  "devDependencies": {
+    "typescript": "^4.5.4"
+  }
+}
