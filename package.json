@@ -4,7 +4,7 @@
   "description": "Boilerplate for Google Cloud Function with description about deploy and run",
   "main": "index.js",
   "scripts": {
-    "test": "test",
+    "test": "jest --passWithNoTests",
     "build": "echo \"Hello, building is done!\""
   },
   "repository": {
@@ -21,6 +21,8 @@
   },
   "homepage": "https://github.com/truepill/cloud-function-boilerplate#readme",
   "devDependencies": {
+    "jest": "^27.4.5",
     "typescript": "^4.5.4"
-  }
+  },
+  "dependencies": {}
 }
