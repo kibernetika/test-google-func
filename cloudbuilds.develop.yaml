@@ -33,7 +33,7 @@ steps:
 
 substitutions:
   _FUNCTION_PROJECT : test-func
-  _FUNCTION_NAME    : my-func
-  _FUNCTION_REGION  : northamerica-northeast1
+  _FUNCTION_NAME    : function-1
+  _FUNCTION_REGION  : europe-central2
   _FUNCTION_RUNTIME : nodejs16
-  _ENTRY_POINT      : myFuncHandler
+  _ENTRY_POINT      : helloWorld
