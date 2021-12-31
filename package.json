@@ -7,6 +7,9 @@
     "test": "jest --passWithNoTests",
     "build": "echo \"Hello, building is done!\""
   },
+  "bin": {
+    "deploy": "bin/deploy.js"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/truepill/cloud-function-boilerplate.git"
