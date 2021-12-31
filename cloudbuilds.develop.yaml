@@ -22,11 +22,18 @@ steps:
       - gcloud
       - functions
       - deploy
-      - function-1
-      - --region=europe-central2
+      - $_FUNCTION_NAME
+      - --region=$_FUNCTION_REGION
       - --source=.
       - --trigger-http
-      - --runtime=nodejs16
-      - --project=func2-336816
-      - --entry-point=myFuncHandler
+      - --runtime=$_FUNCTION_RUNTIME
+      - --project=$_FUNCTION_PROJECT
+      - --entry-point=$_ENTRY_POINT
     id: DEPLOY
+
+substitutions:
+  _FUNCTION_PROJECT : func2-336816
+  _FUNCTION_NAME    : function-1
+  _FUNCTION_REGION  : europe-central2
+  _FUNCTION_RUNTIME : nodejs16
+  _ENTRY_POINT      : myFuncHandler
