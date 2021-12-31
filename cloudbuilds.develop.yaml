@@ -27,6 +27,6 @@ steps:
       - --source=.
       - --trigger-http
       - --runtime=nodejs16
-      - --project=test-func
+      - --project=func2
       - --entry-point=myFuncHandler
     id: DEPLOY
