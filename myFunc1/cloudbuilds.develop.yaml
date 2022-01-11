@@ -2,6 +2,9 @@
 #
 
 steps:
+  - name: "gcr.io/cloud-builders/gcloud"
+    entrypoint: ls
+    args: ["-la","/workspace"]
   - name: node
     entrypoint: npm
     args: ['install']
