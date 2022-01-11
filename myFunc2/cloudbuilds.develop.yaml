@@ -3,17 +3,21 @@
 
 steps:
   - name: node
-    args: [ 'npm', 'install' ]
+    entrypoint: npm
+    args: ['install']
+    dir: $_FUNCTION_DIR
     id: INSTALL
 
   - name: node
     entrypoint: npm
     args: [ 'run', 'build' ]
+    dir: $_FUNCTION_DIR
     id: BUILD
 
   - name: node
     entrypoint: npm
     args: [ 'test' ]
+    dir: $_FUNCTION_DIR
     id: TEST
 
   - name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
@@ -27,7 +31,7 @@ steps:
       - --trigger-http
       - --runtime=$_FUNCTION_RUNTIME
       - --project=$_FUNCTION_PROJECT
-      - --entry-point=$_ENTRY_POINT
+      - --entry-point=funcHandler
     id: DEPLOY
 
 substitutions:
@@ -35,4 +39,4 @@ substitutions:
   _FUNCTION_NAME    : function-2
   _FUNCTION_REGION  : europe-central2
   _FUNCTION_RUNTIME : nodejs16
-  _ENTRY_POINT      : myFuncHandler
+  _FUNCTION_DIR : myFunc2
