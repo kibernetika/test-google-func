@@ -35,7 +35,7 @@ steps:
     id: DEPLOY
 
 substitutions:
-  _FUNCTION_PROJECT : func2-336816 # This is project ID not a name!
+  _FUNCTION_PROJECT : test-func-336618 # This is project ID not a name!
   _FUNCTION_NAME    : function-1
   _FUNCTION_REGION  : europe-central2
   _FUNCTION_RUNTIME : nodejs16
