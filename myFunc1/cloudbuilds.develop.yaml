@@ -2,21 +2,22 @@
 #
 
 steps:
-  - name: "gcr.io/cloud-builders/gcloud"
-    entrypoint: cd
-    args: ["/myFunc1"]
   - name: node
     entrypoint: npm
     args: ['install']
+    dir: 'myFunc1'
     id: INSTALL
+
   - name: node
     entrypoint: npm
     args: [ 'run', 'build' ]
     id: BUILD
+
   - name: node
     entrypoint: npm
     args: [ 'test' ]
     id: TEST
+
   - name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
     args:
       - gcloud
