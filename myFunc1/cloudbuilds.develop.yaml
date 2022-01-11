@@ -4,19 +4,16 @@
 steps:
   - name: node
     entrypoint: npm
-    args: [ 'install' ]
+    args: ['install']
     id: INSTALL
-
   - name: node
     entrypoint: npm
     args: [ 'run', 'build' ]
     id: BUILD
-
   - name: node
     entrypoint: npm
     args: [ 'test' ]
     id: TEST
-
   - name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
     args:
       - gcloud
