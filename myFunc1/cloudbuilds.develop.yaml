@@ -5,17 +5,19 @@ steps:
   - name: node
     entrypoint: npm
     args: ['install']
-    dir: 'myFunc1'
+    dir: $_FUNCTION_DIR
     id: INSTALL
 
   - name: node
     entrypoint: npm
     args: [ 'run', 'build' ]
+    dir: $_FUNCTION_DIR
     id: BUILD
 
   - name: node
     entrypoint: npm
     args: [ 'test' ]
+    dir: $_FUNCTION_DIR
     id: TEST
 
   - name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
@@ -37,3 +39,4 @@ substitutions:
   _FUNCTION_NAME    : function-1
   _FUNCTION_REGION  : europe-central2
   _FUNCTION_RUNTIME : nodejs16
+  _FUNCTION_DIR : myFunc1
