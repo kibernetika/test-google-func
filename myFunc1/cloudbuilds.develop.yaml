@@ -3,17 +3,17 @@
 
 steps:
   - name: node
-    entrypoint: yarn
+    entrypoint: npm
     args: [ 'install' ]
     id: INSTALL
 
   - name: node
-    entrypoint: yarn
+    entrypoint: npm
     args: [ 'run', 'build' ]
     id: BUILD
 
   - name: node
-    entrypoint: yarn
+    entrypoint: npm
     args: [ 'test' ]
     id: TEST
 
