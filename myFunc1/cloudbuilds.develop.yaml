@@ -27,12 +27,12 @@ steps:
       - deploy
       - $_FUNCTION_NAME
       - --region=$_FUNCTION_REGION
-      - --source=./$_FUNCTION_DIR
       - --trigger-http
       - --runtime=$_FUNCTION_RUNTIME
       - --project=$_FUNCTION_PROJECT
       - --entry-point=myFuncHandler
       - --allow-unauthenticated
+    dir: $_FUNCTION_DIR
     id: DEPLOY
 
 substitutions:
