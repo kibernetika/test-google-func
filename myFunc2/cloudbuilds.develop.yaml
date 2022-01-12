@@ -32,6 +32,7 @@ steps:
       - --runtime=$_FUNCTION_RUNTIME
       - --project=$_FUNCTION_PROJECT
       - --entry-point=funcHandler
+      - --allow-unauthenticated
     id: DEPLOY
 
 substitutions:
