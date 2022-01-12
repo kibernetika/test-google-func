@@ -33,6 +33,7 @@ steps:
       - --project=$_FUNCTION_PROJECT
       - --entry-point=funcHandler
       - --allow-unauthenticated
+      - --only functions:$_FUNCTION_NAME
     id: DEPLOY
 
 substitutions:
