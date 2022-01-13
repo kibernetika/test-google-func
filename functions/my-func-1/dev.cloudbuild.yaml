@@ -25,7 +25,7 @@ steps:
       - gcloud
       - functions
       - deploy
-      - '${_FUNCTION_NAME}-${TAG_NAME}'
+      - '${_FUNCTION_NAME}-dev'
       - --region=$_FUNCTION_REGION
       - --trigger-http
       - --runtime=$_FUNCTION_RUNTIME
