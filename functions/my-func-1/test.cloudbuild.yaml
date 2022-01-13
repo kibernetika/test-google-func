@@ -1,23 +1,23 @@
-# This CloudBuild will be triggered by push to the branch "develop"
+# This CloudBuild will be triggered by push to the branch "test"
 #
 
 steps:
   - name: node
     entrypoint: npm
     args: ['install']
-    dir: $_FUNCTION_DIR
+    dir: 'functions/${_FUNCTION_DIR}'
     id: INSTALL
 
   - name: node
     entrypoint: npm
     args: [ 'run', 'build' ]
-    dir: $_FUNCTION_DIR
+    dir: 'functions/${_FUNCTION_DIR}'
     id: BUILD
 
   - name: node
     entrypoint: npm
     args: [ 'test' ]
-    dir: $_FUNCTION_DIR
+    dir: 'functions/${_FUNCTION_DIR}'
     id: TEST
 
   - name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
@@ -25,14 +25,14 @@ steps:
       - gcloud
       - functions
       - deploy
-      - $_FUNCTION_NAME
+      - '${_FUNCTION_NAME}-test'
       - --region=$_FUNCTION_REGION
       - --trigger-http
       - --runtime=$_FUNCTION_RUNTIME
       - --project=$_FUNCTION_PROJECT
       - --entry-point=funcHandler
       - --allow-unauthenticated
-    dir: $_FUNCTION_DIR
+    dir: 'functions/${_FUNCTION_DIR}'
     id: DEPLOY
 
 substitutions:

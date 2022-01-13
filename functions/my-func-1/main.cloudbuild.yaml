@@ -5,19 +5,19 @@ steps:
   - name: node
     entrypoint: npm
     args: ['install']
-    dir: $_FUNCTION_DIR
+    dir: 'functions/${_FUNCTION_DIR}'
     id: INSTALL
 
   - name: node
     entrypoint: npm
     args: [ 'run', 'build' ]
-    dir: $_FUNCTION_DIR
+    dir: 'functions/${_FUNCTION_DIR}'
     id: BUILD
 
   - name: node
     entrypoint: npm
     args: [ 'test' ]
-    dir: $_FUNCTION_DIR
+    dir: 'functions/${_FUNCTION_DIR}'
     id: TEST
 
   - name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
@@ -25,14 +25,13 @@ steps:
       - gcloud
       - functions
       - deploy
-      - $_FUNCTION_NAME
+      - '${_FUNCTION_NAME}-prod'
       - --region=$_FUNCTION_REGION
       - --trigger-http
       - --runtime=$_FUNCTION_RUNTIME
       - --project=$_FUNCTION_PROJECT
       - --entry-point=funcHandler
-      - --allow-unauthenticated
-    dir: $_FUNCTION_DIR
+    dir: 'functions/${_FUNCTION_DIR}'
     id: DEPLOY
 
 substitutions:
