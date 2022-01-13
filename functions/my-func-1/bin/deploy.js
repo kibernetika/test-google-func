@@ -3,12 +3,11 @@
 const shell = require("shelljs");
 
 const command = "gcloud functions deploy " +
-                 "function-8 " +
+                "func-name-local " +
                 "--project test-func-336618 " +
                 "--region europe-central2 " +
-                "--entry-point myFuncHandler " +
+                "--entry-point funcHandler " +
                 "--runtime nodejs16 " +
                 "--allow-unauthenticated " +
                 "--trigger-http";
-
 shell.exec(command);

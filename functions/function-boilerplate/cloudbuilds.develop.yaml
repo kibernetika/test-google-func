@@ -41,4 +41,4 @@ substitutions:
   _FUNCTION_NAME    : function-2
   _FUNCTION_REGION  : europe-central2
   _FUNCTION_RUNTIME : nodejs16
-  _FUNCTION_DIR : my-func-2
+  _FUNCTION_DIR : function-boilerplate
