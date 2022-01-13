@@ -27,6 +27,7 @@ steps:
       - deploy
       - $_FUNCTION_NAME
       - --region=$_FUNCTION_REGION
+      - --source=.
       - --trigger-http
       - --runtime=$_FUNCTION_RUNTIME
       - --project=$_FUNCTION_PROJECT
@@ -37,7 +38,7 @@ steps:
 
 substitutions:
   _FUNCTION_PROJECT : test-func-336618 # This is project ID not a name!
-  _FUNCTION_NAME    : function-1
+  _FUNCTION_NAME    : function-2
   _FUNCTION_REGION  : europe-central2
   _FUNCTION_RUNTIME : nodejs16
-  _FUNCTION_DIR : myFunc1
+  _FUNCTION_DIR : my-func-2

@@ -25,20 +25,19 @@ steps:
       - gcloud
       - functions
       - deploy
-      - $_FUNCTION_NAME
+      - '${_FUNCTION_NAME}-$TAG_NAME'
       - --region=$_FUNCTION_REGION
-      - --source=.
       - --trigger-http
       - --runtime=$_FUNCTION_RUNTIME
       - --project=$_FUNCTION_PROJECT
-      - --entry-point=myFuncHandler
+      - --entry-point=funcHandler
       - --allow-unauthenticated
     dir: $_FUNCTION_DIR
     id: DEPLOY
 
 substitutions:
-  _FUNCTION_PROJECT : test-func-336618 # This is project ID not a name!
-  _FUNCTION_NAME    : function-2
+  _FUNCTION_PROJECT : $PROJECT_ID # This is project ID not a name!
+  _FUNCTION_NAME    : function-1
   _FUNCTION_REGION  : europe-central2
   _FUNCTION_RUNTIME : nodejs16
-  _FUNCTION_DIR : myFunc2
+  _FUNCTION_DIR : my-func-1
