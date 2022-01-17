@@ -6,7 +6,8 @@
   "scripts": {
     "test": "jest --passWithNoTests",
     "build": "echo \"Hello, building is done!\"",
-    "deploy": "node ./bin/deploy.js"
+    "deploy": "node ./bin/deploy.js",
+    "create-env": "printenv > .env"
   },
   "repository": {
     "type": "git",

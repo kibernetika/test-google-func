@@ -10,10 +10,16 @@ steps:
 
   - name: node
     entrypoint: npm
-    args: [ 'run', 'build' ]
+    args: [ "run", "create-env" ]
     env:
       - 'MY_SECRET_KEY_2=${_MY_TEST_2}'
       - 'MY_SECRET_KEY_3=`some value 3`'
+    dir: 'functions/${_FUNCTION_DIR}'
+    id: SETUP_ENV
+
+  - name: node
+    entrypoint: npm
+    args: [ 'run', 'build' ]
     dir: 'functions/${_FUNCTION_DIR}'
     id: BUILD
 
