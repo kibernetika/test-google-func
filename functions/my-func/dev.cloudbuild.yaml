@@ -43,6 +43,8 @@ steps:
     dir: 'functions/${_FUNCTION_DIR}'
     id: DEPLOY
 
+timeout: "1600s"
+
 substitutions:
   _FUNCTION_PROJECT : $PROJECT_ID # This is project ID not a name!
   _FUNCTION_NAME    : my-func
