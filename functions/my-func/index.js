@@ -1,4 +1,4 @@
-require('dotenv').config();
+import 'dotenv/config'
 
 exports.funcHandler = (req, res) => {
     console.log('_MY_TEST_1 ', process.env._MY_TEST_1);
