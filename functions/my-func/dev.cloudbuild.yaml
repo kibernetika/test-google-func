@@ -11,6 +11,9 @@ steps:
   - name: node
     entrypoint: npm
     args: [ 'run', 'build' ]
+    env:
+      - 'MY_SECRET_KEY_2=${_MY_TEST_2}'
+      - 'MY_SECRET_KEY_3=`some value 3`'
     dir: 'functions/${_FUNCTION_DIR}'
     id: BUILD
 
@@ -36,7 +39,7 @@ steps:
 
 substitutions:
   _FUNCTION_PROJECT : $PROJECT_ID # This is project ID not a name!
-  _FUNCTION_NAME    : function-1
+  _FUNCTION_NAME    : my-func
   _FUNCTION_REGION  : europe-central2
   _FUNCTION_RUNTIME : nodejs16
-  _FUNCTION_DIR : my-func-1
+  _FUNCTION_DIR : my-func

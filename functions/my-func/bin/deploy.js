@@ -3,7 +3,7 @@
 const shell = require("shelljs");
 
 const command = "gcloud functions deploy " +
-                "func-name-local " +
+                "my-func-local " +
                 "--project test-func-336618 " +
                 "--region europe-central2 " +
                 "--entry-point funcHandler " +
