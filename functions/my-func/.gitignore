@@ -108,5 +108,8 @@ dist
 .vscode
 .idea
 
-TS
+#TS
 index.js.map
+
+# NPM lock
+package-lock.json
