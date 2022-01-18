@@ -1,16 +1,11 @@
 {
   "compilerOptions": {
-    "module": "amd",
+    "module": "commonJs",
+    "target": "es2019",
+    "strict": true,
+    "sourceMap": false,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
     "esModuleInterop": true,
-    "target": "es5",
-    "noImplicitAny": false,
-    "moduleResolution": "node",
-    "outDir": ".",
-    "outFile":"index.js",
-    "sourceRoot": "./src",
-    "sourceMap": true,
-  },
-  "exclude": [
-    "node_modules"
-  ],
+  }
 }

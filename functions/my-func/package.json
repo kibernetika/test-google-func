@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "jest --passWithNoTests",
-    "build": "tsc --outFile index.js",
+    "build": "webpack",
     "dev": "npx ts-node src/index.ts",
     "deploy": "node ./bin/deploy.js",
     "create-env": "printenv > .env"
@@ -25,7 +25,10 @@
   "homepage": "https://github.com/truepill/cloud-function-boilerplate#readme",
   "devDependencies": {
     "jest": "^27.4.7",
-    "typescript": "^4.5.4"
+    "ts-loader": "^9.2.6",
+    "typescript": "^4.5.4",
+    "webpack": "^5.66.0",
+    "webpack-cli": "^4.9.1"
   },
   "dependencies": {
     "@types/node": "^17.0.8",
