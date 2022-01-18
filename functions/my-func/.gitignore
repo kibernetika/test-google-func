@@ -107,3 +107,6 @@ dist
 #IDE
 .vscode
 .idea
+
+TS
+index.js.map
