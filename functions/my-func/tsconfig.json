@@ -1,0 +1,16 @@
+{
+  "compilerOptions": {
+    "module": "amd",
+    "esModuleInterop": true,
+    "target": "es6",
+    "noImplicitAny": false,
+    "moduleResolution": "node",
+    "outDir": ".",
+    "outFile":"index.js",
+    "sourceRoot": "./src",
+    "sourceMap": true,
+  },
+  "exclude": [
+    "node_modules"
+  ],
+}
