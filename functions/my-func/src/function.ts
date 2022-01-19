@@ -5,6 +5,7 @@ config(); // setup env variables from .env files
 export default (req: any, res: any) => {
     console.log('_MY_TEST_1 ', process.env._MY_TEST_1);
     console.log('_MY_TEST_2 ', process.env._MY_TEST_2);
+    console.log('MY_SECRET_KEY_1 ', process.env.MY_SECRET_KEY_1);
     console.log('MY_SECRET_KEY_2 ', process.env.MY_SECRET_KEY_2);
     console.log('MY_SECRET_KEY_3 ', process.env.MY_SECRET_KEY_3);
     console.log('MY_SECRET_KEY_4 ', process.env.MY_SECRET_KEY_4);
