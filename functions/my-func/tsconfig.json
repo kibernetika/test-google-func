@@ -1,11 +1,13 @@
 {
+  "extends": "./node_modules/gts/tsconfig-google.json",
   "compilerOptions": {
-    "module": "commonJs",
-    "target": "es2019",
-    "strict": true,
-    "sourceMap": false,
-    "emitDecoratorMetadata": true,
-    "experimentalDecorators": true,
-    "esModuleInterop": true,
-  }
+    "outDir": ".",
+    "declaration": true,
+    "declarationMap": true,
+    "sourceMap": false
+  },
+  "include": [
+    "**/*.ts",
+    "test/**/*.ts"
+  ]
 }

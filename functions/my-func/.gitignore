@@ -109,7 +109,5 @@ dist
 .idea
 
 #TS
-index.js.map
-
-# NPM lock
-package-lock.json
+*.d.ts
+*.d.ts.map

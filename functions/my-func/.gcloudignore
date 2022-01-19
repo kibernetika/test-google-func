@@ -15,3 +15,7 @@
 
 node_modules
 #!include:.gitignore
+
+#type script map
+*.d.ts
+*.d.ts.map
