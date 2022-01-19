@@ -7,7 +7,7 @@
     "test": "jest --passWithNoTests",
     "build": "tsc -p .",
     "dev": "npx ts-node src/function.ts",
-    "deploy": "node ./bin/deploy.js",
+    "deploy": "npm run build && node ./bin/deploy.js",
     "create-env": "printenv > .env"
   },
   "repository": {

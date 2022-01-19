@@ -1,5 +1,5 @@
 import { config } from 'dotenv'
-import { handler } from './src/function'
+import handler from './src/function'
 
 config(); // setup env variables from .env files
 
