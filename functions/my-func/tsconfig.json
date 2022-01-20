@@ -7,7 +7,6 @@
     "sourceMap": false
   },
   "include": [
-    "**/*.ts",
-    "test/**/*.ts"
+    "**/*.ts"
   ]
 }

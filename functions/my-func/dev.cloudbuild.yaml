@@ -12,8 +12,8 @@ steps:
     entrypoint: npm
     args: [ "run", "create-env" ]
     env:
-      - 'MY_SECRET_KEY_2=${_MY_TEST_2}'
-      - 'MY_SECRET_KEY_3=`some value 3`'
+      - 'MY_TEST_VALUE=${_MY_TEST_VALUE}'
+      - 'MY_OTHER_VALUE=some value, that is not replaced in the cloud'
     dir: 'functions/${_FUNCTION_DIR}'
     id: SETUP_ENV
 

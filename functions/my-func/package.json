@@ -6,8 +6,8 @@
   "scripts": {
     "test": "jest --passWithNoTests",
     "build": "tsc -p .",
-    "dev": "npx ts-node src/function.ts",
-    "deploy": "npm run build && node ./bin/deploy.js",
+    "dev": "npx ts-node index.ts",
+    "deploy": "npm run build && node ./bin/deploy.js my-func",
     "create-env": "printenv > .env"
   },
   "repository": {

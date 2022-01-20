@@ -111,3 +111,5 @@ dist
 #TS
 *.d.ts
 *.d.ts.map
+/functions/*.js
+!/functions/*/deploy.js
